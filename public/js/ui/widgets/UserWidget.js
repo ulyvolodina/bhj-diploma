@@ -14,7 +14,7 @@ class UserWidget {
 	
 	constructor(element) {
 		if (!element) {
-			throw new Error('Параметр element класса UserWidget не задан');
+			throw new Error('element не задан');
 		}
 		this.element = element;
 	}

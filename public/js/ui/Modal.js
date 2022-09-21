@@ -13,7 +13,7 @@ class Modal {
    * */
 	constructor(element){
 		if (!element) {
-			throw new Error('Параметр element класса Modal не задан');
+			throw new Error('element не задан');
 		}
 		this.element = element;
 

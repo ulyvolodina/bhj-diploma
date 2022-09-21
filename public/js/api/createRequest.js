@@ -5,7 +5,7 @@
 
 const createRequest = (options) => {
 	if (!options) {
-		throw new Error('Параметр options функции createRequest не задан');
+		throw new Error('options не задан');
 	}
 	let {url, headers, data, responseType, method, callback} = options;
 	const xhr = new XMLHttpRequest();
@@ -25,7 +25,7 @@ const createRequest = (options) => {
 			if (String(xhr.status).startsWith('2')) {
 				callback(xhr.response?.error, xhr.response);
 			} else {
-				let content = 'Сервер не принял запрос. ';
+				let content = 'запрос не принят. ';
 				content += `Ошибка ${xhr.status}: ${xhr.statusText}.`;
 				console.error(content);
 			}

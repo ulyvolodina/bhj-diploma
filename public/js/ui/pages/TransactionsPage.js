@@ -58,7 +58,7 @@ class TransactionsPage {
 
 	removeAccount() {
 		if (this.lastOptions) {
-			const confirmation = window.confirm('Вы действительно хотите удалить счёт?');
+			const confirmation = window.confirm('Вы уверены что хотите удалить счёт?');
 			if (confirmation) {
 				const callback = (error) => {
 					if (error) {
@@ -81,7 +81,7 @@ class TransactionsPage {
 	* */
 
 	removeTransaction(id) {
-		const confirmation = window.confirm('Вы действительно хотите удалить эту транзакцию?');
+		const confirmation = window.confirm('Вы уверены что хотите удалить эту транзакцию?');
 		if (confirmation) {
 			const callback = (error) => {
 				if (error) {

@@ -16,7 +16,7 @@ class AsyncForm {
 
 	constructor(element) {
 		if (!element) {
-			throw new Error('Параметр element класса AsyncForm не задан');
+			throw new Error('element не задан');
 		}
 		this.element = element;
 

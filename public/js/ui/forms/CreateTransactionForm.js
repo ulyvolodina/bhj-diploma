@@ -11,7 +11,7 @@ class CreateTransactionForm extends AsyncForm {
 	constructor(element) {
 		super(element);
 		if (!element) {
-			throw new Error('Параметр element класса CreateTransactionForm не задан');
+			throw new Error('element не задан');
 		}
 		this.element = element;
 		this.renderAccountsList();

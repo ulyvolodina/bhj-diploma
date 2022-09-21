@@ -16,7 +16,7 @@ class AccountsWidget {
 
 	constructor(element) {
 		if (!element) {
-			throw new Error('Параметр element класса AccountsWidget не задан');
+			throw new Error('element не задан');
 		}
 		this.element = element;
 		this.update();
