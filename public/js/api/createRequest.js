@@ -3,6 +3,21 @@
  * на сервер.
  * */
 
+const handleError = (error) => {
+	if (App.state !== 'init' && Object.keys(error).length) {
+		let content = 'Ошибка: ';
+		if (typeof error === 'object') {
+			content += Object.values(error).join(' ');
+		} else {
+			content += error;
+		}
+		if (/[^.]$/.test(content)) {
+			content += '.';
+		}
+		console.error(content);
+	}
+}
+
 const createRequest = (options) => {
 	if (!options) {
 		throw new Error('options не задан');
